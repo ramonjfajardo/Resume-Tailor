@@ -1,0 +1,75 @@
+{
+  "name": "Shibo Yang",
+  "email": "shiboyang13@outlook.com",
+  "phone": "",
+  "location": "San Jose, California, United States",
+  "linkedin": "https://www.linkedin.com/in/shibo-yang-912134111/?locale=en_US",
+  "website": "",
+  
+  "experience": [
+    {
+      "company": "Fortinet",
+      "title": "Senior Software Engineer",
+      "location": "Sunnyvale, Califormia",
+      "start_date": "07/2025",
+      "end_date": "12/2025"
+    },
+    {
+      "company": "NIO",
+      "title": "Senior Software Engineer",
+      "location": "San Jose, California",
+      "start_date": "04/2024",
+      "end_date": "06/2025"
+    },
+    {
+      "company": "NIO",
+      "title": "Software Engineer",
+      "location": "San Jose, California",
+      "start_date": "08/2021",
+      "end_date": "03/2024"
+    },
+    {
+    "company": "Toyota Connected North America",
+    "title": "Software Engineer",
+    "location": "Irvine, California",
+    "start_date": "12/2020",
+    "end_date": "08/2021"
+    },
+    {
+    "company": "Skycatch",
+    "title": "Software Engineer Intern",
+    "location": "San Francisco,California",
+    "start_date": "07/2014",
+    "end_date": "04/2021"
+    },
+    {
+    "company": "YOROTEK Intelligent Technology",
+    "title": "Software Engineer",
+    "location": "Beijing, China",
+    "start_date": "09/2016",
+    "end_date": "02/2018"
+    },
+    {
+    "company": "Goldwind",
+    "title": "Research and Development Engineer Intern",
+    "location": "",
+    "start_date": "07/2016",
+    "end_date": "09/2016"
+    }
+  ],
+  
+  "education": [
+    {
+      "degree": "Master of Science - MS, Electrical and Computer Engineering",
+      "school": "University at Buffalo",
+      "start_year": "",
+      "end_year": ""
+    },
+    {
+    "degree": "Bachelor of Science - BS, Mechanical Automation",
+    "school": "University at Buffalo",
+    "start_year": "",
+    "end_year": ""
+    }
+  ]
+}

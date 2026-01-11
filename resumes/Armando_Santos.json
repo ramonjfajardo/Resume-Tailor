@@ -1,0 +1,33 @@
+{
+  "name": "Armando Santos",
+  "email": "lucasm6784@gmail.com",
+  "phone": "",
+  "location": "São Bento do Sul, Santa Catarina, Brazil",
+  "linkedin": "https://www.linkedin.com/in/armando-prates-dos-santos-732610167/",
+  "website": "",
+  
+  "experience": [
+    {
+      "company": "h2o-facilities LATAM",
+      "title": "Senior Software Engineer",
+      "location": "São Bento do Sul, Santa Catarina, Brasil",
+      "start_date": "09/2021",
+      "end_date": "Present"
+    },
+    {
+      "company": "3E Engenharia em Eficiência Energética",
+      "title": "Software Engineer",
+      "location": "",
+      "start_date": "06/2016",
+      "end_date": "12/2020"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor's Degree, Computer Science",
+      "school": "Centro Universitário Senac",
+      "start_year": "2008",
+      "end_year": "2011"
+    }
+  ]
+}

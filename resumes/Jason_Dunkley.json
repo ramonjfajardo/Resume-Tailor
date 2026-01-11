@@ -1,0 +1,62 @@
+{
+  "name": "Jason Dunkley",
+  "email": "jason_dunkley@outlook.com",
+  "phone": "",
+  "location": "Minneapolis, Minnesota, United States",
+  "linkedin": "https://www.linkedin.com/in/jason-dunkley-b2743260/",
+  "website": "",
+  
+  "experience": [
+    {
+      "company": "Medical Solutions",
+      "title": "Senior Software Engineer",
+      "location": "",
+      "start_date": "08/2025",
+      "end_date": "12/2025"
+    },
+    {
+      "company": "Palisaid",
+      "title": "Senior Backend Software Engineer",
+      "location": "",
+      "start_date": "05/2025",
+      "end_date": "12/2025"
+    },
+    {
+      "company": "Sunnova Energy",
+      "title": "Tech Lead/Senior Full Stact Software Engineer",
+      "location": "",
+      "start_date": "02/2025",
+      "end_date": "05/2025"
+    },
+    {
+    "company": "Sunnova Energy",
+    "title": "Senior Full Stact Software Engineer",
+    "location": "",
+    "start_date": "11/2022",
+    "end_date": "02/2025"
+    },
+    {
+    "company": "Epic",
+    "title": "Full Stack Software Developer",
+    "location": "",
+    "start_date": "07/2014",
+    "end_date": "04/2021"
+    },
+    {
+    "company": "McKesson",
+    "title": "Application Developer",
+    "location": "",
+    "start_date": "06/2013",
+    "end_date": "08/2013"
+    }
+  ],
+  
+  "education": [
+    {
+      "degree": "Bachelor's degree, Computer Science and Biomedical Engineering",
+      "school": "Washington University in St. Louis",
+      "start_year": "2010",
+      "end_year": "2014"
+    }
+  ]
+}
