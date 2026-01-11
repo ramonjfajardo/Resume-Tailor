@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{name}} — Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", "Inter", "Helvetica Neue", Arial, sans-serif;
+        font-size: 10.5pt;
+        line-height: 1.6;
+        color: #1a1a1a;
+        background: #ffffff;
+        max-width: 8.5in;
+        position: relative;
+      }
+
+      /* Decorative background elements */
+      body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
+        border-radius: 50%;
+        z-index: 0;
+      }
+
+      body::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 150px;
+        height: 150px;
+        background: linear-gradient(135deg, rgba(236, 72, 153, 0.05) 0%, rgba(99, 102, 241, 0.05) 100%);
+        border-radius: 50%;
+        z-index: 0;
+      }
+
+      /* Header with gradient and modern design */
+      header {
+        position: relative;
+        z-index: 1;
+        text-align: left;
+        margin-bottom: 32px;
+        padding: 32px 40px;
+        background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+        color: #ffffff;
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 10px 40px rgba(99, 102, 241, 0.2);
+      }
+
+      header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+        opacity: 0.3;
+        border-radius: 0 0 20px 20px;
+      }
+
+      header h1 {
+        position: relative;
+        z-index: 2;
+        font-size: 38pt;
+        font-weight: 800;
+        margin-bottom: 8px;
+        color: #ffffff;
+        letter-spacing: -1pt;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      header .title {
+        position: relative;
+        z-index: 2;
+        font-size: 15pt;
+        font-weight: 400;
+        margin-bottom: 16px;
+        color: #f0f0f0;
+        letter-spacing: 0.5pt;
+        opacity: 0.95;
+      }
+
+      .contact {
+        position: relative;
+        z-index: 2;
+        font-size: 10pt;
+        color: #ffffff;
+        line-height: 2;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        opacity: 0.95;
+      }
+
+      .contact a {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 6px 12px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      /* Section Headers with modern design */
+      section {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 32px;
+      }
+
+      section h2 {
+        font-size: 13pt;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #6366f1;
+        margin-bottom: 18px;
+        letter-spacing: 2pt;
+        position: relative;
+        padding-left: 16px;
+        padding-bottom: 12px;
+      }
+
+      section h2::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 5px;
+        background: linear-gradient(180deg, #6366f1 0%, #a855f7 100%);
+        border-radius: 3px;
+      }
+
+      section h2::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, #6366f1 0%, #a855f7 100%);
+        border-radius: 2px;
+      }
+
+      /* Summary with card design */
+      .summary {
+        font-size: 10.5pt;
+        line-height: 1.8;
+        text-align: left;
+        color: #374151;
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        padding: 20px 24px;
+        border-radius: 12px;
+        border-left: 4px solid #6366f1;
+        box-shadow: 0 4px 12px rgba(99, 102, 241, 0.08);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .summary::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(99, 102, 241, 0.05) 0%, transparent 70%);
+      }
+
+      /* Skills with modern badges */
+      .skills-category {
+        margin-bottom: 12px;
+        line-height: 1.7;
+        padding: 12px 16px;
+        background: #ffffff;
+        border-radius: 10px;
+        border: 2px solid #6366f1;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
+      }
+
+      .skills-category::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: linear-gradient(180deg, #6366f1 0%, #a855f7 100%);
+        transform: scaleY(1);
+      }
+
+      .skills-category strong {
+        font-size: 10.5pt;
+        font-weight: 700;
+        color: #6366f1;
+        display: inline-block;
+        min-width: 140px;
+        margin-right: 12px;
+        position: relative;
+      }
+
+      .skills-list {
+        font-size: 10pt;
+        color: #4b5563;
+        font-weight: 400;
+      }
+
+      /* Experience with timeline design */
+      .exp-item {
+        margin-bottom: 28px;
+        page-break-inside: avoid;
+        padding: 20px 24px;
+        background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+        border-radius: 12px;
+        border-left: 4px solid #6366f1;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        position: relative;
+      }
+
+      .exp-item::before {
+        content: '';
+        position: absolute;
+        left: -8px;
+        top: 24px;
+        width: 16px;
+        height: 16px;
+        background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+        border-radius: 50%;
+        border: 3px solid #ffffff;
+        box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+      }
+
+      .exp-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 8px;
+      }
+
+      .exp-title {
+        font-size: 12pt;
+        font-weight: 700;
+        color: #6366f1;
+      }
+
+      .exp-dates {
+        font-size: 9.5pt;
+        color: #6366f1;
+        font-weight: 600;
+        white-space: nowrap;
+        margin-left: 10px;
+        background: linear-gradient(135deg, #eef2ff 0%, #ede9fe 100%);
+        padding: 6px 14px;
+        border-radius: 20px;
+        border: 1px solid rgba(99, 102, 241, 0.2);
+      }
+
+      .exp-company {
+        font-size: 10.5pt;
+        color: #6366f1;
+        margin-bottom: 10px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .exp-company::before {
+        content: '▸';
+        color: #a855f7;
+        font-size: 12pt;
+      }
+
+      .exp-details {
+        margin-left: 0;
+        margin-top: 12px;
+        padding-left: 20px;
+      }
+
+      .exp-details li {
+        font-size: 10pt;
+        line-height: 1.7;
+        margin-bottom: 6px;
+        text-align: left;
+        color: #374151;
+        position: relative;
+        padding-left: 8px;
+      }
+
+      .exp-details li::marker {
+        color: #a855f7;
+        font-weight: bold;
+      }
+
+      /* Education with modern cards */
+      .edu-item {
+        margin-bottom: 20px;
+        padding: 18px 22px;
+        background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+        border-radius: 12px;
+        border-left: 4px solid #a855f7;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      }
+
+      .edu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 6px;
+      }
+
+      .edu-degree {
+        font-size: 11pt;
+        font-weight: 700;
+        color: #a855f7;
+      }
+
+      .edu-dates {
+        font-size: 9.5pt;
+        color: #a855f7;
+        font-weight: 600;
+        white-space: nowrap;
+        background: linear-gradient(135deg, #faf5ff 0%, #fce7f3 100%);
+        padding: 6px 14px;
+        border-radius: 20px;
+        border: 1px solid rgba(168, 85, 247, 0.2);
+      }
+
+      .edu-school {
+        font-size: 10.5pt;
+        color: #6366f1;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .edu-school::before {
+        content: '🎓';
+        font-size: 12pt;
+      }
+
+      /* Print optimization */
+      @media print {
+        body {
+          padding: 0.6in 0.7in;
+        }
+        body::before, body::after {
+          display: none;
+        }
+        header {
+          margin-left: -0.7in;
+          margin-right: -0.7in;
+          margin-top: -17mm;
+          padding: 24px 32px;
+          border-radius: 0;
+          box-shadow: none;
+        }
+        header::before {
+          display: none;
+        }
+        .exp-item, .edu-item, .skills-category, .summary {
+          background: #ffffff !important;
+          border: 1px solid #e5e7eb;
+          box-shadow: none !important;
+        }
+        .exp-item::before {
+          display: none;
+        }
+        .contact a {
+          background: transparent;
+          border: none;
+          padding: 0;
+        }
+        .exp-title {
+          color: #6366f1 !important;
+        }
+        .edu-degree {
+          color: #a855f7 !important;
+        }
+      }
+
+      /* Prevent orphaned headers */
+      h2 {
+        page-break-after: avoid;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>{{name}}</h1>
+      <div class="title">{{title}}</div>
+      <div class="contact">
+        {{#if phone}}<span><a href="tel:{{phone}}">{{phone}}</a></span>{{/if}}
+        <span><a href="mailto:{{email}}">{{email}}</a></span>
+        {{#if linkedin}}<span><a href="{{linkedin}}">{{linkedin}}</a></span>{{/if}}
+        <span>{{location}}</span>
+      </div>
+    </header>
+
+    {{#if summary}}
+    <section>
+      <h2>Summary</h2>
+      <p class="summary">{{summary}}</p>
+    </section>
+    {{/if}} {{#if skills}}
+    <section>
+      <h2>Technical Skills</h2>
+      {{#each skills}}
+      <div class="skills-category">
+        <strong>{{formatKey @key}}:</strong>
+        <span class="skills-list">{{join this ", "}}</span>
+      </div>
+      {{/each}}
+    </section>
+    {{/if}} {{#if experience}}
+    <section>
+      <h2>Experience</h2>
+      {{#each experience}}
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-title">{{title}}</div>
+          <div class="exp-dates">{{start_date}} – {{end_date}}</div>
+        </div>
+        <div class="exp-company">
+          {{company}}{{#if location}} - {{location}}{{/if}}
+        </div>
+        {{#if details}}
+        <ul class="exp-details">
+          {{#each details}}
+          <li>{{this}}</li>
+          {{/each}}
+        </ul>
+        {{/if}}
+      </div>
+      {{/each}}
+    </section>
+    {{/if}} {{#if education}}
+    <section>
+      <h2>Education</h2>
+      {{#each education}}
+      <div class="edu-item">
+        <div class="edu-header">
+          <div class="edu-degree">{{degree}}</div>
+          <div class="edu-dates">
+            {{start_year}}{{#if end_year}} – {{end_year}}{{/if}}
+          </div>
+        </div>
+        <div class="edu-school">{{school}}</div>
+      </div>
+      {{/each}}
+    </section>
+    {{/if}}
+  </body>
+</html>
+

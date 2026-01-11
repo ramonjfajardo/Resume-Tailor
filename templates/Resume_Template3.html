@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{name}} — Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+        font-size: 10.5pt;
+        line-height: 1.6;
+        color: #2c3e50;
+        background: #ffffff;
+        max-width: 8.5in;
+      }
+
+      header {
+        text-align: left;
+        margin-bottom: 30px;
+        padding-bottom: 22px;
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      header h1 {
+        font-size: 30pt;
+        font-weight: 300;
+        margin-bottom: 8px;
+        color: #2c3e50;
+        letter-spacing: -0.5pt;
+      }
+
+      header .title {
+        font-size: 13pt;
+        font-weight: 400;
+        margin-bottom: 12px;
+        color: #7f8c8d;
+        letter-spacing: 0.5pt;
+      }
+
+      .contact {
+        font-size: 9.5pt;
+        color: #555555;
+        line-height: 1.8;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .contact a {
+        color: #3498db;
+        text-decoration: none;
+      }
+
+      section {
+        margin-bottom: 24px;
+      }
+
+      section h2 {
+        font-size: 11.5pt;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #3498db;
+        margin-bottom: 12px;
+        letter-spacing: 1.5pt;
+        padding-bottom: 4px;
+        border-bottom: 1px solid #ecf0f1;
+      }
+
+      .summary {
+        font-size: 10pt;
+        line-height: 1.7;
+        text-align: left;
+        color: #34495e;
+      }
+
+      .skills-category {
+        margin-bottom: 8px;
+        line-height: 1.6;
+      }
+
+      .skills-category strong {
+        font-size: 10pt;
+        font-weight: 600;
+        color: #2c3e50;
+        display: inline-block;
+        min-width: 120px;
+        margin-right: 8px;
+      }
+
+      .skills-list {
+        font-size: 10pt;
+        color: #555555;
+      }
+
+      .exp-item {
+        margin-bottom: 20px;
+        page-break-inside: avoid;
+        padding-left: 12px;
+        border-left: 2px solid #ecf0f1;
+      }
+
+      .exp-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 4px;
+      }
+
+      .exp-title {
+        font-size: 11.5pt;
+        font-weight: 600;
+        color: #2c3e50;
+      }
+
+      .exp-dates {
+        font-size: 9.5pt;
+        color: #7f8c8d;
+        font-weight: 400;
+        white-space: nowrap;
+        margin-left: 10px;
+      }
+
+      .exp-company {
+        font-size: 10pt;
+        color: #3498db;
+        margin-bottom: 6px;
+        font-weight: 500;
+      }
+
+      .exp-details {
+        margin-left: 0;
+        margin-top: 6px;
+        padding-left: 18px;
+      }
+
+      .exp-details li {
+        font-size: 10pt;
+        line-height: 1.6;
+        margin-bottom: 4px;
+        text-align: left;
+        color: #34495e;
+      }
+
+      .edu-item {
+        margin-bottom: 14px;
+        padding-left: 12px;
+        border-left: 2px solid #ecf0f1;
+      }
+
+      .edu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 4px;
+      }
+
+      .edu-degree {
+        font-size: 10.5pt;
+        font-weight: 600;
+        color: #2c3e50;
+      }
+
+      .edu-dates {
+        font-size: 9.5pt;
+        color: #7f8c8d;
+        white-space: nowrap;
+      }
+
+      .edu-school {
+        font-size: 10pt;
+        color: #3498db;
+        font-weight: 500;
+      }
+
+      @media print {
+        body {
+          padding: 0.6in 0.7in;
+        }
+        header {
+          margin-top: 0;
+        }
+      }
+
+      h2 {
+        page-break-after: avoid;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>{{name}}</h1>
+      <div class="title">{{title}}</div>
+      <div class="contact">
+        {{#if phone}}<span>{{phone}}</span>{{/if}}
+        <span><a href="mailto:{{email}}">{{email}}</a></span>
+        {{#if linkedin}}<span><a href="{{linkedin}}">{{linkedin}}</a></span>{{/if}}
+        <span>{{location}}</span>
+      </div>
+    </header>
+
+    {{#if summary}}
+    <section>
+      <h2>Summary</h2>
+      <p class="summary">{{summary}}</p>
+    </section>
+    {{/if}} {{#if skills}}
+    <section>
+      <h2>Technical Skills</h2>
+      {{#each skills}}
+      <div class="skills-category">
+        <strong>{{formatKey @key}}:</strong>
+        <span class="skills-list">{{join this ", "}}</span>
+      </div>
+      {{/each}}
+    </section>
+    {{/if}} {{#if experience}}
+    <section>
+      <h2>Experience</h2>
+      {{#each experience}}
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-title">{{title}}</div>
+          <div class="exp-dates">{{start_date}} – {{end_date}}</div>
+        </div>
+        <div class="exp-company">
+          {{company}}{{#if location}} - {{location}}{{/if}}
+        </div>
+        {{#if details}}
+        <ul class="exp-details">
+          {{#each details}}
+          <li>{{this}}</li>
+          {{/each}}
+        </ul>
+        {{/if}}
+      </div>
+      {{/each}}
+    </section>
+    {{/if}} {{#if education}}
+    <section>
+      <h2>Education</h2>
+      {{#each education}}
+      <div class="edu-item">
+        <div class="edu-header">
+          <div class="edu-degree">{{degree}}</div>
+          <div class="edu-dates">
+            {{start_year}}{{#if end_year}} – {{end_year}}{{/if}}
+          </div>
+        </div>
+        <div class="edu-school">{{school}}</div>
+      </div>
+      {{/each}}
+    </section>
+    {{/if}}
+  </body>
+</html>
+

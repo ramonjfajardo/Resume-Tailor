@@ -1,0 +1,41 @@
+{
+  "name": "Blake Martin",
+  "email": "keepersun5@outlook.com",
+  "phone": "",
+  "location": "Dallas, Texas, United States",
+  "linkedin": "https://www.linkedin.com/in/blake-martin-b75a05103/",
+  "website": "",
+  
+  "experience": [
+    {
+      "company": "EF Johnson Technologies, Inc",
+      "title": "Senior Software Engineer",
+      "location": "",
+      "start_date": "06/2023",
+      "end_date": "Present"
+    },
+    {
+    "company": "EF Johnson Technologies, Inc",
+    "title": "Software Engineer",
+    "location": "",
+    "start_date": "06/2018",
+    "end_date": "04/2023"
+    },
+    {
+    "company": "EF Johnson Technologies, Inc",
+    "title": "Software Engineering Intern",
+    "location": "",
+    "start_date": "06/2015",
+    "end_date": "06/2018"
+    }
+  ],
+  
+  "education": [
+    {
+      "degree": "Bachelor of Science - Computer Science",
+      "school": "University of North Texas",
+      "start_year": "2014",
+      "end_year": "2018"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "name": "Ben Walker",
+  "email": "keepersun3@outlook.com",
+  "phone": "",
+  "location": ", United States",
+  "linkedin": "https://www.linkedin.com/in/ben-walker-45044340/",
+  "website": "",
+  
+  "experience": [
+    {
+      "company": "Webflow",
+      "title": "Senior Backend Software Engineer",
+      "location": "",
+      "start_date": "04/2021",
+      "end_date": "Present"
+    },
+    {
+      "company": "Simple Finance",
+      "title": "Senior Backend Engineer",
+      "location": "",
+      "start_date": "09/2019",
+      "end_date": "04/2021"
+    },
+    {
+      "company": "Simple Finance",
+      "title": "Backend Engineer",
+      "location": "",
+      "start_date": "04/2018",
+      "end_date": "09/2019"
+    },
+    {
+      "company": "Jive Software",
+      "title": "Software Engineer",
+      "location": "",
+      "start_date": "05/2014",
+      "end_date": "03/2018"
+    },
+    {
+    "company": "Jive Software",
+    "title": "Technical Support Engineer",
+    "location": "",
+    "start_date": "12/2012",
+    "end_date": "05/2014"
+    },
+    {
+    "company": "Jive Software",
+    "title": "Technical Support Analyst",
+    "location": "",
+    "start_date": "06/2012",
+    "end_date": "11/2014"
+    }
+  ],
+  
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "school": "University of Portland",
+      "start_year": "2008",
+      "end_year": "2012"
+    }
+  ]
+}

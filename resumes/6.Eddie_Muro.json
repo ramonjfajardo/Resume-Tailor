@@ -1,0 +1,48 @@
+{
+  "name": "Eddie Muro",
+  "email": "eddie_muro@outlook.com",
+  "phone": "",
+  "location": "El Paso, Texas, United States",
+  "linkedin": "https://www.linkedin.com/in/eddie-muro-9098162a8/",
+  "website": "",
+  
+  "experience": [
+    {
+      "company": "Upwork",
+      "title": "Senior Software Engineer(Freelance)",
+      "location": "",
+      "start_date": "12/2021",
+      "end_date": "Present"
+    },
+    {
+      "company": "Routr",
+      "title": "Full Stack Developer",
+      "location": "Austin, Texas, United States",
+      "start_date": "02/2023",
+      "end_date": "present"
+    },
+    {
+      "company": "Spectrum Technologies",
+      "title": "React/Node FullStack Developer",
+      "location": "El Paso, TX",
+      "start_date": "11/2018",
+      "end_date": "10/2021"
+    },
+    {
+    "company": "Pixelbyte",
+    "title": "Web Developer",
+    "location": "",
+    "start_date": "07/2015",
+    "end_date": "10/2018"
+    }
+  ],
+  
+  "education": [
+    {
+      "degree": "Bachelor of Science, Computer Science",
+      "school": "The University of Texas",
+      "start_year": "2014",
+      "end_year": "2019"
+    }
+  ]
+}
